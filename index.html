@@ -24,7 +24,7 @@
                     </div>
     
                     <div class="nav__item mail">
-                        <a href="javascript:;">info@itman.spb.ru</a>
+                        <a href="mailto:info@itman.spb.ru">info@itman.spb.ru</a>
                     </div>
     
                     <div class="nav__item address">
@@ -35,7 +35,7 @@
                     </div>
     
                     <div class="nav__item phone">
-                        <a href="javascript:;">+7 (812) 409 48 03</a> 
+                        <a href="tel:+78124094803">+7 (812) 409 48 03</a> 
                     </div>
                 </div>
                 
@@ -52,6 +52,43 @@
         <section class="intro">
             <div class="wrapper">
                 <div class="intro__bg">
+                    <div class="man">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#itman"></use>
+                        </svg>
+                    </div>
+                    <div class="clouds">
+                        <div class="clouds__layer" data-layer="1">
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                        </div>
+                        <div class="clouds__layer" data-layer="2">
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                        </div>
+                        <div class="clouds__layer" data-layer="3">
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                            <svg class="clouds__item">
+                                <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                            </svg>
+                        </div>
+                    </div>
                     <h1 class="title">ITMan - Информационные технологии для бизнеса и домашних хозяйств</h1>
                 </div>
             </div>
@@ -200,21 +237,30 @@
                         </div>
                         <div class="layout__item-content">
                             <form action="" class="feedback">
-                                <label class="feedback__item">                                    
-                                    <input type="text" class="feedback__item-input error" placeholder="Ваше имя">
+                                <label class="feedback__item">  
+                                    <svg width="18" height="24">
+                                        <use xlink:href="img/icons/sprite.svg#user"></use>
+                                    </svg>                                
+                                    <input type="text" class="feedback__item-input" placeholder="Ваше имя">
                                 </label>
                                     
-                                <label class="feedback__item">                                   
+                                <label class="feedback__item">   
+                                    <svg width="16" height="24">
+                                        <use xlink:href="img/icons/sprite.svg#phone1"></use>
+                                    </svg>                                 
                                     <input type="text" class="feedback__item-input" placeholder="Телефон или e-mail">
                                 </label>
 
-                                <label class="feedback__item">                                   
-                                    <textarea name="" id="" class="feedback__item-comment error" placeholder="Ваш вопрос или сообщение"></textarea>
+                                <label class="feedback__item">    
+                                    <svg width="22" height="18">
+                                        <use xlink:href="img/icons/sprite.svg#pencil"></use>
+                                    </svg>                                  
+                                    <textarea name="" id="" class="feedback__item-comment" placeholder="Ваш вопрос или сообщение"></textarea>
                                 </label>
 
                                 <div class="feedback__footer">
                                     <label class="feedback__agree">
-                                        <input type="checkbox" class="agree error" name="" id="">
+                                        <input type="checkbox" class="agree" name="" id="">
                                         <div class="feedback__agree-text">Я соглашаюсь на обработку персональных данных</div>
                                     </label>
                 
@@ -242,16 +288,34 @@
                             </div>
                         </div>
                         <div class="layout__item-content">
-                            <div class="wysiwyg">
-                                <div class="address__item">
-
+                            <div class="address__item">
+                                <div class="icon">
+                                    <svg width="22" height="20">
+                                        <use xlink:href="img/icons/sprite.svg#home"></use>
+                                    </svg>
                                 </div>
-                                <p>Наши реквизиты</p>
 
-                                <p>Файл</p>
-                                <p>itman_rekuizity.pdf</p>
-                                <a href="javascript:;" class="download">Скачать</a>
+                                <p>195213, г. Санкт-Петербург, ул. Латышских стрелков, 31, 
+                                    БЦ «Оккервиль», оф.206</p>
+                            </div>
+                            <div class="address__item">
+                                <div class="icon">
+                                    <svg width="18" height="28">
+                                        <use xlink:href="img/icons/sprite.svg#phone2"></use>
+                                    </svg>
+                                </div>
 
+                                <a href="javascript:;">+7 (812) 4094803</a>
+                            </div>
+
+                            <div class="address__item">
+                                <div class="icon">
+                                    <svg width="22" height="16">
+                                        <use xlink:href="img/icons/sprite.svg#mail"></use>
+                                    </svg>
+                                </div>
+
+                                <a href="javascript:;">info@itman.spb.ru</a>
                             </div>
                         </div>
                     </div>
@@ -263,25 +327,77 @@
         <div class="wrapper">
             <div class="footer__wrap">
                 <div class="footer__item">
-                    <span class="copyright">&#169;</span> РВК.Катализ. 2021                   
+                    &#169; ITMan, 2021                   
                 </div>
-                <a href="javascript:;" class="footer__item">Условия работы сайта</a>
-                <a href="javascript:;" class="footer__item">Карта сайта</a>
+
+                <div class="logo">
+                    <svg>
+                        <use xlink:href="img/icons/sprite.svg#itman"></use>
+                    </svg>
+                </div>
+
+                <div class="clouds">
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+
+                    <svg width="30" height="18" class="clouds__item">
+                        <use xlink:href="img/icons/sprite.svg#cloud"></use>
+                    </svg>
+                </div>
+                
                 
                 <div class="footer__item siluet">
-                    <svg width="18" height="16">
+                    <svg width="21" height="21">
                         <use xlink:href="img/icons/sprite.svg#siluet"></use>
                     </svg>
 
-                    <a href="javascript:;">Веб-студия "Силуэт": создание сайтов</a>
+                    <a href="http://siluetstudio.com">Сделано в Siluet Studio</a>
                 </div>
             </div>
             
         </div>
     </footer>
+
+    <div class="popup">
+        <div class="popup__wrap">
+            <div class="popup__item">
+                <div class="popup__item-top">
+                    <div class="name">
+                        <h2>Предупреждение</h2>
+                        <div class="lines"></div>
+                    </div>
+                    <div class="close">
+                        <svg>
+                            <use xlink:href="img/icons/sprite.svg#close"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="popup__item-content">
+                    <p class="text">Невозможно закрыть &laquo;<span>Компьютеры</span>&raquo;</p>
+
+                    <a href="javascript:;" class="btn">Отменить</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="js/libs/jquery-3.2.1.min.js"></script> 
-    <script src="js/libs/jquery.fancybox.min.js"></script>
-    <script src="js/libs/slick.min.js"></script>
     <script src="js/jquery-ready.js"></script>
     </body>
 </html>

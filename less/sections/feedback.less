@@ -3,6 +3,13 @@
     &__item {
         display: block;
         margin-bottom: 9px;
+        position: relative;
+
+        svg {
+            position: absolute;
+            top: 9px;
+            left: 13px;
+        }
 
         &-input {
             width: 100%;
@@ -10,10 +17,14 @@
             //background-color: @white;
             border: 2px dotted #99999d;
             outline: none;
-            padding: 10px;
+            padding: 10px 10px 10px 44px;
             font-size: 13px;
-            color: @blue;
+            color: @dark;
             font-family: @bulgaria;
+
+            &::placeholder {
+                color: #99999e;
+            }
 
             &.error {
                 border-color: red;
@@ -26,10 +37,15 @@
             //background-color: @white;
             border: 2px dotted #99999d;
             outline: none;
-            padding: 10px;
+            padding: 10px 10px 10px 44px;
             font-size: 13px;
-            color: @blue;
+            line-height: 1.5;
+            color: @dark;
             font-family: @bulgaria;
+
+            &::placeholder {
+                color: #99999e;
+            }
 
             &.error {
                 border-color: red;
@@ -42,7 +58,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 15px;
+        margin-top: 12px;
     }
 
     &__agree {
@@ -54,14 +70,19 @@
             visibility: hidden;
             opacity: 0;
 
-            &.error + .form__agree-text {
+            &.error + .feedback__agree-text {
                 &:before {
                     border-color: red;
                 }
                 
             }
 
-            &:checked + .form__agree-text {
+            &:checked + .feedback__agree-text {
+                &:before {
+                    background-color: @green;
+                    border-style: solid;
+                }
+
                 &:after {
                     opacity: 1;
                 }
@@ -92,12 +113,11 @@
                 top: 0;
                 bottom: 0;
                 margin: auto;
-                width: 13px;
-                height: 10px;
-                background-image: url("../img/icons/agree.png");
-                background-size: 13px 10px;
+                width: 24px;
+                height: 16px;
+                background-image: url("../img/icons/check.svg");
+                background-size: cover;
                 opacity: 0;
-                transition: 0.3s;
             }
 
             a {
@@ -115,6 +135,12 @@
         padding: 12px 37px 8px 10px;
         position: relative;
 
+        &:hover {
+            .arrow {
+                right: 8px;
+            }
+        }
+
         .arrow {
             position: absolute;
             right: 10px;
@@ -123,104 +149,26 @@
     
 }
 
-@media screen and (max-width: 1200px) {
-    .feedback {
-        .content {
-            width: calc(100% - 320px);
-            padding-right: 30px;
-        }
-
-        .sidebar {
-            width: 320px;
-        }
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .feedback {
-        padding: 61px 0 0;
-        &__wrap {
-            display: block
-        }
-        .content {
-            width: 100%;
-            padding-right: 0;
-            margin-bottom: 40px;
-        }
-
-        .tabs {
-            margin-left: 0;
-        }
-
-        .sidebar {
-            width: calc(100% + 30px);
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -15px;
-            padding: 30px 15px 10px;
-
-
-            &__title {
-                width: 100%;
-            }
-
-            &__item {
-                width: 50%;
-                margin-bottom: 20px;
-
-                .content {
-                    margin: 0;
-                    padding: 7px 15px 0 15px;
-                }
-            }
-        }
-    }
-}
-
 @media screen and (max-width: 768px) {
     .feedback {
-        padding: 30px 0 0;
-
-        .tabs {    
-            &__item {
-                font-size: 15px;
+        &__item {
+            &-input {
+                font-size: 10px;
             }
-        }
-    }
-}
 
-@media screen and (max-width: 576px) {
-    .feedback {
-        .sidebar {
-            &__item {
-                width: 100%;
-
-                .content {
-                    padding: 7px 0 0 15px;
-                }
-            }
-        }
-    }
-
-    .form {
-        &__row {
-            display: block;
-            margin: 0;
-
-            .form__item {
-                width: 100%;
-                margin-left: 0;
-                margin-right: 0;
+            &-comment {
+                font-size: 10px;
+                height: 80px;
             }
         }
 
         &__footer {
             display: block;
+            margin-top: 18px;
         }
 
-        &__agree {
-            margin-bottom: 30px;
-            display: block;
+        &__submit {
+            margin-top: 18px;
         }
     }
 }
